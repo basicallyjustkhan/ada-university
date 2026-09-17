@@ -11,7 +11,7 @@ int main(void)
     }
     else
     {
-        printf("Not Allowed\n")
+        printf("Not Allowed\n");
     }
 
     return 0;
