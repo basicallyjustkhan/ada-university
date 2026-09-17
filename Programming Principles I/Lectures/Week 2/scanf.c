@@ -15,7 +15,7 @@ int main(void)
     {
         printf("B\n");
     }
-    else if(grade > 80)
+    else if(grade > 70)
     {
         printf("C\n");
     }
@@ -23,6 +23,6 @@ int main(void)
     {
         printf("F\n");
     }
-    
+
     return 0;
 } 
