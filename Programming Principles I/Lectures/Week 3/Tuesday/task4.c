@@ -6,6 +6,7 @@ int main(void)
 
     for (int i = 0; i < 5; i++)
     {
-        printf("a[%d]: %d\n", i, i*i);
+        a[i] = i * i;
+        printf("a[%d]: %d\n", i, a[i]);
     }
 } 
