@@ -17,15 +17,17 @@ int main(void)
     average = (double)sum / N;
     printf("Average: %.2f\n", average);
 
-    printf("Values greater than average: ");
+    printf("Numbers greater than average: ");
+    int count = 0;
     for (int i = 0; i < N; i++)
     {
         if (a[i] > average)
         {
             printf("%d ", a[i]);
+            count++;
         }
     }
-    printf("\n");
+    printf("\nCount: %d\n", count);
 
     return 0;
 } 
