@@ -4,9 +4,9 @@
 
 int main(void)
 {
-    double a[N];
+    double a[5];
 
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < 5; i++)
     {
         scanf("%lf", &a[i]);
         printf("a[%d]: %lf\n", i, a[i]);
