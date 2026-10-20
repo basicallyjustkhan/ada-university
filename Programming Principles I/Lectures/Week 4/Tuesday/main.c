@@ -17,7 +17,7 @@ int count(const int array[],int number)
 
 int main(void)
 {
-	int numbers[N] = {5, 3, 16, 16, 6};
+	int numbers[N] = {5, 3, 16, 16, 7};
 	int target = 16;
 
 	printf("Count: %d\n", count(numbers, target));
