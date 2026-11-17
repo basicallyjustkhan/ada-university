@@ -9,18 +9,11 @@ struct book {
 int main(void) {
 	struct book book;
 
-	printf("Enter title: ");
-	scanf("%19s", book.title);
+	puts("Enter title, ID, and price:");
+	scanf("%19s %d %lf", book.title, &book.year, &book.price);
 
-	printf("Enter ID: ");
-	scanf("%d", &book.year);
-	
-    printf("Enter price: ");
-	scanf("%lf", &book.price);
-
-	printf("Title: %s\n", book.title);
-	printf("ID: %d\n", book.year);
-	printf("Price: %.2f\n", book.price);
+	printf("Title: %s\nID: %d\nPrice: %.2f\n",
+	       book.title, book.year, book.price);
 
 	return 0;
 }
