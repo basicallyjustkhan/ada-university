@@ -1,26 +1,26 @@
 #include <stdio.h>
 
-struct student {
-	char name[20];
+struct book {
+	char title[20];
 	int id;
-	double gpa;
+	double price;
 };
 
 int main(void) {
-	struct student student;
+	struct book book;
 
-	printf("Enter name: ");
-	scanf("%19s", student.name);
+	printf("Enter title: ");
+	scanf("%19s", book.title);
 
 	printf("Enter ID: ");
-	scanf("%d", &student.id);
+	scanf("%d", &book.id);
 	
-    printf("Enter GPA: ");
-	scanf("%lf", &student.gpa);
+    printf("Enter price: ");
+	scanf("%lf", &book.price);
 
-	printf("Name: %s\n", student.name);
-	printf("ID: %d\n", student.id);
-	printf("GPA: %.2f\n", student.gpa);
+	printf("Title: %s\n", book.title);
+	printf("ID: %d\n", book.id);
+	printf("Price: %.2f\n", book.price);
 
 	return 0;
 }
