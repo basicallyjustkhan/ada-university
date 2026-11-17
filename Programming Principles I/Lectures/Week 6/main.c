@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct book {
 	char title[20];
@@ -6,13 +7,12 @@ struct book {
 	double price;
 };
 
-int main(void) {
+int main(int argc, char *argv[]) {
 	struct book book;
 
-	puts("Enter title, year, price:");
-	scanf("%19s %d %lf", book.title, &book.year, &book.price);
-
-	
+	strcpy(book.title, argv[1]);
+	book.year = atio(argv[2]);
+	book.price = atof(argv[3]);
 
 	printf("Title: %s\nYear: %d\nPrice: %.2f\n", book.title, book.year, book.price);
 
