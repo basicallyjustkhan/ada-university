@@ -12,8 +12,7 @@ int main(void) {
 	puts("Enter title, ID, and price:");
 	scanf("%19s %d %lf", book.title, &book.year, &book.price);
 
-	printf("Title: %s\nID: %d\nPrice: %.2f\n",
-	       book.title, book.year, book.price);
+	printf("Title: %s\nID: %d\nPrice: %.2f\n", book.title, book.year, book.price);
 
 	return 0;
 }
