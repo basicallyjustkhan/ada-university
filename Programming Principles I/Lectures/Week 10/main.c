@@ -36,12 +36,22 @@ struct Student create_student(char name[], int id, double gpa, int day, int mont
 }
 
 int main() {
-    struct Student s = create_student("Kamran", 25, 3.4, 4, 5, 2020);
-    print_student(s);
-
-    raise_gpa(&s);
-    rename_student(&s, "Kanan");
-    print_student(s);
+    // struct Student s = create_student("Kamran", 25, 3.4, 4, 5, 2020);
+    // print_student(s);
+    // raise_gpa(&s);
+    // rename_student(&s, "Kanan");
+    // print_student(s);
     
+    struct Student sgr[4] = {
+        {"Kamran", 25, 3.4, 4, 5, 2020},
+        {"Kanan", 26, 3.5, 5, 6, 2021},
+        {"Aysel", 27, 3.6, 6, 7, 2022},
+        {"Nijat", 28, 3.7, 7, 8, 2023}
+    };
+
+    for (int i = 0; i < 4; i++) {
+        print_student(sgr[i]);
+    }
+
     return 0;
 }
