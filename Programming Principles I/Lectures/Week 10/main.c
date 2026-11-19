@@ -35,6 +35,15 @@ struct Student create_student(char name[], int id, double gpa, int day, int mont
     return s;
 }
 
+struct Student *find_by_id(struct Student students[], int id) {
+    for (int i = 0; i < 4; i++) {
+        if (students[i].id == id) {
+            return &students[i];
+        }
+    }
+    return 0;
+}
+
 int main() {
     // struct Student s = create_student("Kamran", 25, 3.4, 4, 5, 2020);
     // print_student(s);
@@ -52,6 +61,8 @@ int main() {
     for (int i = 0; i < 4; i++) {
         print_student(sgr[i]);
     }
+
+    print_student(*find_by_id(sgr, 27));
 
     return 0;
 }
