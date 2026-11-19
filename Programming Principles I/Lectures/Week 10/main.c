@@ -26,8 +26,17 @@ void rename_student(struct Student *s, char name[]) {
     strcpy(s->name, name);
 }
 
+struct Student create_student(char name[], int id, double gpa, int day, int month, int year) {
+    struct Student s;
+    strcpy(s.name, name);
+    s.id = id;
+    s.gpa = gpa;
+    s.date = (Date){day, month, year};
+    return s;
+}
+
 int main() {
-    struct Student s = {"Kamran", 25, 3.4, {4, 5, 2020}};
+    struct Student s = create_student("Kamran", 25, 3.4, 4, 5, 2020);
     print_student(s);
 
     raise_gpa(&s);
