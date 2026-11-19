@@ -15,7 +15,7 @@ struct Student {
 };
 
 void print_student(struct Student s) {
-    printf("%-8s %d %g %02d/%02d/%04d\n", s.name, s.id, s.gpa, s.date.day, s.date.month, s.date.year);
+    printf("%-8s %d %g %02d.%02d.%04d\n", s.name, s.id, s.gpa, s.date.day, s.date.month, s.date.year);
 }
 
 void raise_gpa(struct Student *s) {
