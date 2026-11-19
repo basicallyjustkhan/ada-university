@@ -22,12 +22,16 @@ void raise_gpa(struct Student *s) {
     s->gpa += 0.3;
 }
 
+void rename_student(struct Student *s, char name) {
+    strcpy(s->name, name);
+}
+
 int main() {
     struct Student s = {"Kamran", 25, 3.4, {4, 5, 2020}};
     print_student(s);
 
     raise_gpa(&s);
-    strcpy(s.name, "Kanan");
+    rename_student(&s, "Kanan");
     print_student(s);
     
     return 0;
