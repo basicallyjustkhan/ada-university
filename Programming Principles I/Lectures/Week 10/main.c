@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct Date {
 	int day;
@@ -14,10 +15,7 @@ struct Student {
 };
 
 void print_student(struct Student s) {
-    printf("Name: %s\n", s.name);
-    printf("ID: %d\n", s.id);
-    printf("GPA: %g\n", s.gpa);
-    printf("Date: %02d/%02d/%04d\n", s.date.day, s.date.month, s.date.year);
+    printf("%-8s %d %g %02d/%02d/%04d\n", s.name, s.id, s.gpa, s.date.day, s.date.month, s.date.year);
 }
 
 void raise_gpa(struct Student *s) {
@@ -29,6 +27,7 @@ int main() {
     print_student(s);
 
     raise_gpa(&s);
+    strcpy(s.name, "Kanan");
     print_student(s);
     
     return 0;
