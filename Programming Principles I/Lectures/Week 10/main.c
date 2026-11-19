@@ -22,7 +22,7 @@ void raise_gpa(struct Student *s) {
     s->gpa += 0.3;
 }
 
-void rename_student(struct Student *s, char name) {
+void rename_student(struct Student *s, char name[]) {
     strcpy(s->name, name);
 }
 
